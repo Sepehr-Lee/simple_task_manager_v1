@@ -9,29 +9,32 @@ Followed a guide for the implementation—no AI was used except for visual desig
 
 Features:
 
-Flask Backend: Minimal Python web server for local development
-Sass Integration: Modern CSS with variables and nesting
-Auto-Refresh: Live Sass compilation with browser reload
-Semi-clean Architecture: Organized static/templates structure
+1. Flask Backend: Minimal Python web server for local development
+2. Sass Integration: Modern CSS with variables and nesting
+3. Auto-Refresh: Live Sass compilation with browser reload
+4. Semi-clean Architecture: Organized static/templates structure
 
 Project Structure:
 The task manager consists of 4 main parts:
 
-App.py - Main Flask application and routing
-Static folder - CSS, JavaScript, and other assets
-Templates folder - HTML templates with Jinja2 syntax
-SQLite database - Created automatically on first use
+1. App.py - Main Flask application and routing
+2. Static folder - CSS, JavaScript, and other assets
+3. Templates folder - HTML templates with Jinja2 syntax
+4. SQLite database - Created automatically on first use
 
 How It Works:
 
-The App.py code acts as a "controller hub" for fetching and displaying different elements based on which webpage the user is currently viewing.
+1. The App.py code acts as a "controller hub" for fetching and displaying different elements based on which webpage the user is currently viewing.
 (Note that there are only 2 pages: index.html for the landing/homepage/main screen, and edit.html for task modification.)
 
-The HTML pages are designed to inherit their main structure and styling from base.html (the parent template) using Jinja2 templating. This approach allows for efficient page creation and maintenance by:
+2. The HTML pages are designed to inherit their main structure and styling from base.html (the parent template) using Jinja2 templating. This approach allows for efficient page creation and maintenance by:
 
 Backend Design: Implementing the desired user actions (create, read, update, delete) in Python
+
 Frontend Design: Creating HTML files that inherit global elements from the base template
+
 Global Updates: Modifying visual/functional elements in one place without editing each HTML page individually
+
 
 Installation and use:
 
