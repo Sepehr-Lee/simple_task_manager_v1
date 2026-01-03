@@ -7,8 +7,9 @@ from flask_sqlalchemy import SQLAlchemy
 App = Flask(__name__)
 Scss(App)
 
-App.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///taskmanagerapp.db"
+App.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mytaskmanagerapp.db"
 App.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
+
 db = SQLAlchemy(App)
 
 # Data
@@ -22,8 +23,9 @@ class Task(db.Model):
         return f"Task {self.id}"
 
 
-    with App.app_context():
+with App.app_context():
         db.create_all()
+
 
 # Routes
 
