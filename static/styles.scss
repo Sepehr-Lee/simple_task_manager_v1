@@ -1,0 +1,117 @@
+// Color Palette
+
+
+$title_color: #2d5a4d;
+$primary_color: #7aa095;
+$primary_hover_color: #5d8c7e;
+$success_color: #88b3a5;
+$success_hover_color: #6d9789;
+$bg_color: #f8f5f2;
+$card_bg: #fffefc;
+$border_color: #e0dcd5;
+$text_light: #5a5a5a;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $bg_color;
+    color: $text_light;
+    line-height: 1.6;
+}
+
+.content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: $card_bg;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid $border_color;
+
+    h1 {
+        color: $title_color;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    h4 {
+        color: cornflowerblue;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 30px;
+        border-collapse: collapse;
+
+        th, td {
+            padding: 15px;
+            border: 1px solid $border_color;
+            text-align: left;
+
+            th {
+                background-color: lighten($primary_color, 40%);
+                color: darken($title_color, 10%);
+                font-weight: 600;
+            }
+            
+            td {
+                background-color: #fff;
+            }
+        }
+    }
+
+    a {
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 12px 24px;
+        background-color: $primary_color;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary_hover_color;
+        }
+    }
+
+    input {
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid $border_color;
+        border-radius: 6px;
+        width: 70%;
+        font-size: 16px;
+        transition: border 0.3s ease;
+        
+        &:focus {
+            outline: none;
+            border-color: $primary_color;
+            box-shadow: 0 0 0 2px rgba($primary_color, 0.2);
+        }
+    }
+
+    #button_add {
+        background-color: $success_color;
+        color: #fff;
+        cursor: pointer;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+            background-color: $success_hover_color;
+        }
+    }
+}
+
+// dummy text for testing
+// deleted
